@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocialHub.Api</name>
+    </assembly>
+    <members>
+        <member name="M:SocialHub.Api.Controllers.AnalyticsController.GetByWorkspace(System.Int32)">
+            <summary>
+            Get analytics snapshots for all social accounts in a workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.AnalyticsController.GetBySocialAccount(System.Int32)">
+            <summary>
+            Get analytics snapshots for a specific social account.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.AnalyticsController.GetSummary(System.Int32)">
+            <summary>
+            Get aggregated analytics summary for a workspace across all platforms.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.DashboardController.GetDashboardSummary(System.Int32)">
+            <summary>
+            Get dashboard summary metrics and recent activity for a workspace.
+            </summary>
+            <param name="workspaceId">The workspace ID.</param>
+            <returns>Dashboard summary metrics, counts, recent posts, and notifications.</returns>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.HashtagsController.GetAll">
+            <summary>
+            Get all hashtags.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.HashtagsController.Create(SocialHub.Api.DTOs.CreateHashtagRequest)">
+            <summary>
+            Create a new hashtag.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.HashtagsController.Delete(System.Int32)">
+            <summary>
+            Delete a hashtag by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.HealthController.GetHealth">
+            <summary>
+            Health check endpoint to verify API readiness.
+            </summary>
+            <returns>Health status, service name, and UTC timestamp.</returns>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.GetAll">
+            <summary>
+            Get all media items.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.GetById(System.Int32)">
+            <summary>
+            Get media item by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.GetByWorkspace(System.Int32)">
+            <summary>
+            Get all media items for a specific workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.Create(SocialHub.Api.DTOs.CreateMediaRequest)">
+            <summary>
+            Create media item metadata.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.Update(System.Int32,SocialHub.Api.DTOs.UpdateMediaRequest)">
+            <summary>
+            Update existing media item metadata.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.MediaController.Delete(System.Int32)">
+            <summary>
+            Delete a media item by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.NotificationsController.GetAll">
+            <summary>
+            Get all notifications.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.NotificationsController.GetByWorkspace(System.Int32)">
+            <summary>
+            Get all notifications for a specific workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.NotificationsController.MarkAsRead(System.Int32)">
+            <summary>
+            Mark a notification as read.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.NotificationsController.MarkAllAsRead(System.Nullable{System.Int32})">
+            <summary>
+            Mark all notifications as read (optionally filtered by workspace).
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.GetAll(SocialHub.Api.DTOs.PostQueryParameters)">
+            <summary>
+            Get all posts with optional filtering by workspace, status, platform, and text search.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.GetById(System.Int32)">
+            <summary>
+            Get post by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.GetByWorkspace(System.Int32)">
+            <summary>
+            Get all posts for a specific workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Create(SocialHub.Api.DTOs.CreatePostRequest)">
+            <summary>
+            Create a new post.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Update(System.Int32,SocialHub.Api.DTOs.UpdatePostRequest)">
+            <summary>
+            Update an existing post.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Delete(System.Int32)">
+            <summary>
+            Delete a post by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Publish(System.Int32)">
+            <summary>
+            Publish a post (Mock operation).
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Schedule(System.Int32,SocialHub.Api.DTOs.SchedulePostRequest)">
+            <summary>
+            Schedule a post for future publishing.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Duplicate(System.Int32)">
+            <summary>
+            Duplicate a post as a new draft.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.PostsController.Retry(System.Int32)">
+            <summary>
+            Retry publishing a failed post.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.GetAll">
+            <summary>
+            Get all social accounts.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.GetById(System.Int32)">
+            <summary>
+            Get social account by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.GetByWorkspace(System.Int32)">
+            <summary>
+            Get all social accounts for a specific workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.Create(SocialHub.Api.DTOs.CreateSocialAccountRequest)">
+            <summary>
+            Create a new social account.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.Update(System.Int32,SocialHub.Api.DTOs.UpdateSocialAccountRequest)">
+            <summary>
+            Update an existing social account.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.Delete(System.Int32)">
+            <summary>
+            Delete a social account by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.Connect(System.Int32)">
+            <summary>
+            Connect a social account (Mock operation).
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.SocialAccountsController.Disconnect(System.Int32)">
+            <summary>
+            Disconnect a social account (Mock operation).
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.UsersController.GetAll">
+            <summary>
+            Get all users.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Get user by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.UsersController.Create(SocialHub.Api.DTOs.CreateUserRequest)">
+            <summary>
+            Create a new user.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.UsersController.Update(System.Int32,SocialHub.Api.DTOs.UpdateUserRequest)">
+            <summary>
+            Update an existing user.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete a user by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.WorkspacesController.GetAll">
+            <summary>
+            Get all workspaces.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.WorkspacesController.GetById(System.Int32)">
+            <summary>
+            Get workspace by ID.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.WorkspacesController.Create(SocialHub.Api.DTOs.CreateWorkspaceRequest)">
+            <summary>
+            Create a new workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.WorkspacesController.Update(System.Int32,SocialHub.Api.DTOs.UpdateWorkspaceRequest)">
+            <summary>
+            Update an existing workspace.
+            </summary>
+        </member>
+        <member name="M:SocialHub.Api.Controllers.WorkspacesController.Delete(System.Int32)">
+            <summary>
+            Delete a workspace by ID.
+            </summary>
+        </member>
+        <member name="T:SocialHub.Api.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialHub.Api.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialHub.Api.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialHub.Api.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
