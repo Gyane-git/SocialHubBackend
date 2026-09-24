@@ -1,0 +1,16 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
+    container_name: socialhub-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "SocialHub@12345"
+    ports:
+      - "1433:1433"
+    volumes:
+      - socialhub_sql_data:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  socialhub_sql_data:

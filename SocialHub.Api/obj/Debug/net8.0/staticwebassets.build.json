@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KNWWtzzZmru3dfWmPvg/hE1tSzoduKH/p/E4vLaEu1U=",
+  "Source": "SocialHub.Api",
+  "BasePath": "_content/SocialHub.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
