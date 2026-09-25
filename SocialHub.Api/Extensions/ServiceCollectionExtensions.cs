@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using SocialHub.Api.Common;
+using SocialHub.Api.Configuration;
+using SocialHub.Api.Controllers;
 using SocialHub.Api.Data;
 using SocialHub.Api.Interfaces;
 using SocialHub.Api.Services;
@@ -45,6 +47,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IAnalyticsService, AnalyticsService>();
         services.AddScoped<IDashboardService, DashboardService>();
 
+        services.Configure<MetaOptions>(configuration.GetSection(MetaOptions.SectionName));
+        services.AddSingleton<IMetaOAuthStateStore, MetaOAuthStateStore>();
+        services.AddHttpClient<IMetaOAuthService, MetaOAuthService>();
+
         // 3. CORS Configuration for Next.js frontend
         services.AddCors(options =>
         {
@@ -59,6 +65,7 @@ public static class ServiceCollectionExtensions
 
         // 4. Controllers with JSON options and custom invalid model state response
         services.AddControllers()
+            .AddApplicationPart(typeof(MetaIntegrationController).Assembly)
             .AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
