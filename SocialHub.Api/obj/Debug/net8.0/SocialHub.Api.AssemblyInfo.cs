@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialHub.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc35bc5c8496e481626642a8545d561ccde7cb19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2c33c416b2356a4e652ba548f242b6dce715ef8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialHub.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialHub.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
